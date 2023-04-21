@@ -2,23 +2,17 @@
 // Get references to the #generate element
 const generateBtn = document.querySelector("#generate");
 
-const uppercaseABC = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Z"];
-const lowercaseABC = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+const uppercaseChar = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Z"];
+const lowercaseChar = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 const specialChar = ["!","@","#","$","%","^","&","*","()","?",".","<","\",">","|",'=',"+",':',';',",",'[',"-",'_"];
-const numeric = ["0","1","2","3","4","5","6","7","8","9"];
+const numericChar = ["0","1","2","3","4","5","6","7","8","9"];
 // const multiSelect =[];
 
-const passwordLength = Number(prompt("How many character in password? Must be between 8 and 128)"));
 
-const passwordCharType = confirm("Do you want to  include lowercase, uppercase, numeric, and/or special characters?");
+// function generatePasswordOptions () { 
+//   uppercaseChar || lowercaseChar || specialChar || numericChar;
+// }
 
-
-
-
-  // function getRandom(arr) {
-  //   var randomIndex = Math.floor(Match.random () * arr.length);
-  //   var randomElement = arr(randomeInex)
-  // }
 
 // GIVEN I need a new, secure password
 // !WHEN I click the button to generate a password
@@ -36,12 +30,68 @@ const passwordCharType = confirm("Do you want to  include lowercase, uppercase, 
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
 
+function getRandomPassword() {
+  const randomIndex = Math.floor(Math.random() * Arr.length);
+  const randomChoice = arr[randomIndex];
+
+  return randomChoice;
+}
+
 
 
 function generatePassword() {
-  console.log("hey! generate password!");
 
-  return "generated password!";
+  const passwordLength = Number(prompt("How many character in password? Must be between 8 and 128)"));
+  const lowercaseChar = confirm("Do you want to  include lowercase characters?");
+  const uppercaseChar = confirm("Do you want to  include uppercase characters?");
+  const specialChar = confirm("Do you want to  include special characters?");
+  const nubmericChar = confirm("Do you want to  include numeric characters?");
+
+
+  // var options = generatePasswordOptions();
+  // var result = [];
+  // var getRandomPassword = [];
+  // var altChar = [];
+
+  if (options.lowercaseChar) {
+    getRandomPassword.push(getRandomPassword(lowercaseChar));
+    altChar = altChar.concat(lowercaseChar);
+  };
+
+  if (options.uppercaseChar) {
+    getRandomPassword.push(getRandomPassword(uppercaseChar));
+    altChar = altChar.concat(uppercaseChar);
+    console.log(randomChar);
+    console.log(altChar);
+  };
+
+  if (options.specialChar) {
+    getRandomPassword.push(getRandomPassword(symbolChar));
+    altChar = altChar.concat(specialChar);
+  };
+
+  if (options.numericChar) {
+    getRandomPassword.push(getRandomPassword(numbersChar));
+    altChar = altChar.concat(numericChar);
+  };
+
+  var password = "";
+  for (let i = 0; i < length; i++) {
+    password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
+  };
+
+  // for(var i = 0; i < options.length; i++) {
+  //   var altChar = getRandomPassword(altChar);
+  // }
+
+  // for (var i = 0; i < options.length; i++) {
+  //   result [i] = randomChar[i];
+  // }
+  
+
+    console.log("hey! generate password!");
+
+    return result.join("");
 
 };
 
@@ -53,21 +103,20 @@ function writePassword() {
   var password = generatePassword(); 
   var passwordText = document.querySelector("#password");
 
-  //   // checking password length
-  // if (passwordLength < 8 || passwordLength > 128) {
-  //   alert("Your password length is invalid")
-  //   const passwordLength = Number(prompt("Password length must be between 8 and 128"));
+    // checking password length
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Your password length is invalid")
+    const passwordLength = Number(prompt("Password length must be between 8 and 128"));
   
-  // } else {
-  //   const passwordLength = Number(prompt("Password length must be between 8 and 128"));
+  } 
   
-  // };
-  //   //var keyLength = prompt("Password must be between 8 and 128 characters in length.");
+
+  
   
 
   passwordText.value = password;
 
-}
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
