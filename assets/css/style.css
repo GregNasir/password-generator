@@ -12,10 +12,20 @@ body,
   padding: 0;
 }
 
+/* sets font and background color of body */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
+
+/* header settings */
+header {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
+}
+
 
 .wrapper {
   padding-top: 30px;
@@ -25,13 +35,7 @@ body {
   
 }
 
-header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
-}
-
+/*sets parameters for the generate password area */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -74,6 +78,7 @@ header {
   clear: both;
 }
 
+/*sets color and general settings for generate password buttom */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
