@@ -12,7 +12,8 @@ Adding Javascript codes to this project gave me a real indepth insight on the us
 
 # Deployed Site and repository
 
-
+* <a href="https://gregnasir.github.io/password-generator/">Deployed password generator</a>
+* <a href=">
 
 
 # Installation
