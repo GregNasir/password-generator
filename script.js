@@ -72,10 +72,7 @@ function writePassword() {
   var password = generatePassword(); 
   var passwordText = document.querySelector("#password");
 
-
   return passwordText.value = password;
-
- 
 
 };
 

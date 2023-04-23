@@ -10,26 +10,32 @@
   <body>
     <section class="wrapper">
 
+      <!--Header of webpage-->
       <header>
         <h1>Password Generator</h1>
       </header>
 
-      <div class="card">
-        <div class="card-header">
+      <!--block to generate and show password-->
+      <section class="card">
+        <article class="card-header">
           <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
+        </article>
+
+      <!--Password will be shown-->
+        <article class="card-body">
           <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
-        </div>
-        <div class="card-footer">
+        </article>
+
+      <!--footer-->
+        <section class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
+        </section>
+      </section>
     </section>
     <script src="script.js"></script>
   </body>
