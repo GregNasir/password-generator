@@ -23,6 +23,9 @@ HTML, CSS and Javascript were used to produce this webpage. Creating its appeara
 # Usage 
 
 The password generator, produces random passwords for users
+  
+<img width="719" alt="Screen-shot-password-generator" src="https://user-images.githubusercontent.com/63434657/233824809-95e60767-726d-4d62-b067-9985c011ea7c.png">
+
 
 * Columbia Engineering Bootcamp resources
 * <a href="https://www.w3schools.com/">w3schools website</a>
