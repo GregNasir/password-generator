@@ -16,6 +16,14 @@ const charChoice = {
 function generatePassword() {
 
   var passwordLength = prompt("How many character in password? Must be between 8 and 128)");
+  
+  // checking length of password between 8 and 128
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Your password length is invalid")
+    // var passwordLength = Number(prompt("Password length must be between 8 and 128"));
+    return generatePassword();
+  };
+  
   var lowercaseChar = confirm("Do you want to  include lowercase characters?");
   var uppercaseChar = confirm("Do you want to  include uppercase characters?");
   var specialChar = confirm("Do you want to  include special characters?");
@@ -40,13 +48,6 @@ function generatePassword() {
 
   if (numericChar) {
     getChar += charChoice.numericChar;
-  };
-
-  // checking length of password between 8 and 128
-  if (passwordLength < 8 || passwordLength > 128) {
-    alert("Your password length is invalid")
-    var passwordLength = Number(prompt("Password length must be between 8 and 128"));
-  
   };
 
   // confirming one selection has been made
